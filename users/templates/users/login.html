@@ -15,17 +15,17 @@
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
-            <legend class=""> join </legend>
+            <legend class=""> Log In </legend>
               {{ form |crispy }}
             <div class="form-group">
-                <button class="btn btn-info" type="submit" > sign up </button>
+                <button class="btn btn-info" type="submit"> Login </button>
             </div>
         </fieldset>
     </form>
 
     <div class="border-top pt-3">
         <small class="text-muted">
-            already have an account?<a href="{% url 'login' %}" class="ml-2"> sign in </a>
+           Need an account?<a href="{% url 'register' %}" class="ml-2"> sign up now </a>
         </small>
     </div>
 
