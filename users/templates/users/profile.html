@@ -11,7 +11,17 @@
 
 {% block content %}
 {{block.super}}
-<h1> {{ user.username }} </h1>
+<div class="container">
+    <div class="row">
+    <div class="profile-header-container">
+        <img class="img-circle" src="{{ user.profile.image.url }}" width="200" height="200">
+        <div class="media-body">
+            <h2 class="label label-default rank-label">{{ user.username }}</h2>
+            <p class="label label-default rank-label">{{ user.email }}</p>
+        </div>
+    </div>
+    </div>
+</div>
 {% endblock %}
     
 </body>
