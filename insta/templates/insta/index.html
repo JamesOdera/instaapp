@@ -14,14 +14,28 @@
 <div class="container-fluid display">
     <div class="row">
     {% for image in images %}
+    <h1>{{ image.profile }}</h1> 
     <div class="col-md-4 ">
         <img src="{{image.image.url}}" class="img-fluid img-thumbnail img-responsive" alt="image" height="300px"
-            width="600px" padding-top="3px" data-toggle="modal" data-target="#{{image.title}}{{image.id}}"><br>
+            width="600px" padding-top="3px" data-toggle="modal" data-target="#{{image.name}}{{image.id}}"><br>
     </div>
     {% endfor %}
     </div>
     </div>
-<img class="img-circle" src=" {{ profile.image.url }} " width="200" height="200">
+    {% for post in posts %}
+     <div class="media content-section">
+         <div class="media-body">
+            <img class="img-circle" src=" {{ post.author.profile.image.url }} " width="200" height="200">
+             <div class="article-metadata">
+                 <a href="#"> {{ post.author }} </a>
+                 <a href="#"> {{ post.pub_date|timesince }} </a>
+             </div>
+             <h2><a href="#"> {{ post.title }} </a></h2>
+             <p href="#"> {{ post.content }} </p>
+         </div>
+     </div>
+    {% endfor %}
+
 {% endblock %}
     
 </body>
