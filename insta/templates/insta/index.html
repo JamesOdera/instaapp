@@ -10,12 +10,14 @@
 
 {% block content %}
 {{block.super}}
+
 <h1 class='text-center'> INSTAGRAM CLONE </h1>
 <div class="container-fluid display">
     <div class="row">
     {% for image in images %}
-    <h1>{{ image.profile }}</h1> 
+    
     <div class="col-md-4 ">
+        <h1>{{ image.profile }}</h1> 
         <img src="{{image.image.url}}" class="img-fluid img-thumbnail img-responsive" alt="image" height="300px"
             width="600px" padding-top="3px" data-toggle="modal" data-target="#{{image.name}}{{image.id}}"><br>
     </div>
@@ -26,7 +28,8 @@
      <div class="media content-section">
          <div class="media-body">
             <img class="img-circle" src=" {{ post.author.profile.image.url }} " width="200" height="200">
-             <div class="article-metadata">
+            <img src="{{ post.cover.url}}" alt="{{ post.title }}" width="200" height="200"> 
+            <div class="article-metadata">
                  <a href="#"> {{ post.author }} </a>
                  <a href="#"> {{ post.pub_date|timesince }} </a>
              </div>
@@ -35,6 +38,10 @@
          </div>
      </div>
     {% endfor %}
+    {% for post in object_list %}
+    <h2>{{ post.title }}</h2>
+    <img src="{{ post.cover.url}}" alt="{{ post.title }}">
+  {% endfor %}
 
 {% endblock %}
     
