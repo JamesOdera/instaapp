@@ -28,7 +28,12 @@
      <div class="media content-section">
          <div class="media-body">
             <img class="img-circle" src=" {{ post.author.profile.image.url }} " width="200" height="200">
-            <img src="{{ post.cover.url}}" alt="{{ post.title }}" width="200" height="200"> 
+            
+            {% if post.cover %}
+            <img src="{{ post.cover.url}}" alt="{{ post.title }}" width="200" height="200">
+          {% else %}
+          <p></p>
+           {% endif %} 
             <div class="article-metadata">
                  <a href="#"> {{ post.author }} </a>
                  <a href="#"> {{ post.pub_date|timesince }} </a>

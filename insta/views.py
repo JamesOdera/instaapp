@@ -24,7 +24,7 @@ class PostListView(ListView):
 
 class PostCreateView(CreateView):
     model = Post
-    fields = [ 'title', 'content', 'image']
+    fields = [ 'title', 'content', 'cover']
     
     def form_valid(self, form):
         form.instance.author = self.request.user
