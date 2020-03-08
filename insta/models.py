@@ -31,3 +31,16 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('index')
+
+class Comment(models.Model):
+    post = models.ForeignKey('insta.Post', on_delete=models.CASCADE, related_name='comments')
+    author = models.CharField(max_length=20)
+    text = models.TextField()
+    pub_date = models.DateTimeField(auto_now_add=True)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text

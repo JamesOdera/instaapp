@@ -11,6 +11,18 @@
 {% block content %}
 {{block.super}}
 <h1 class='text-center'> ABOUT </h1>
+<hr>
+{% for comment in comments %}
+    <div class="comment">
+        <div class="date">{{ comment.pub_date }}</div>
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.text }}</p>
+    </div>
+{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %}
+
+
 {% endblock %}
     
 </body>
