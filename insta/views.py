@@ -3,6 +3,7 @@ from django.http  import HttpResponse
 from django.views.generic import ListView, CreateView
 import datetime as dt
 from .models import Image, Post
+from django.contrib.auth.mixins import LoginRequiredMixin 
 
 
 def index(request):
@@ -22,7 +23,7 @@ class PostListView(ListView):
     ordering = ['-pub_date']
     template_name = 'insta/index.html'
 
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = [ 'title', 'content', 'cover']
     
