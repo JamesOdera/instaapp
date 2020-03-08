@@ -25,23 +25,27 @@
     </div>
     </div>
     {% for post in posts %}
-     <div class="media content-section">
-         <div class="media-body">
-            <img class="img-circle" src=" {{ post.author.profile.image.url }} " width="200" height="200">
-            
+    <div class="col-md-7">
+     <div class="panel panel-default">
+         <div class="panel-heading">
+            <img class="img-circle" src=" {{ post.author.profile.image.url }} " width="50" height="50">
+            <p> {{ post.author }} </p>
+         </div>
+         <div class="panel-body">
             {% if post.cover %}
             <img src="{{ post.cover.url}}" alt="{{ post.title }}" width="200" height="200">
           {% else %}
           <p></p>
            {% endif %} 
-            <div class="article-metadata">
-                 <a href="#"> {{ post.author }} </a>
-                 <a href="#"> {{ post.pub_date|timesince }} </a>
-             </div>
-             <h2><a href="#"> {{ post.title }} </a></h2>
-             <p href="#"> {{ post.content }} </p>
          </div>
-     </div>
+            <div class="article-metadata">
+                 
+                 <p>{{ post.pub_date|timesince }} ago </p>
+             </div>
+             <h2> {{ post.title }} </h2>
+             <p> {{ post.content }} </p>
+         </div>
+         </div>
     {% endfor %}
 
 {% endblock %}
