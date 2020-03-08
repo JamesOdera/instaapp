@@ -1,0 +1,29 @@
+{%extends 'insta/base.html'%}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+{% block content %}
+{{block.super}}
+<div class="col-md-6">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class=""> insta </legend>
+              {{ form |crispy }}
+            <div class="form-group">
+                <button class="btn btn-info" type="submit" > post </button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
+    
+</body>
+</html>

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, CreateView
 import datetime as dt
 from .models import Image, Post
 
@@ -22,8 +22,10 @@ class PostListView(ListView):
     ordering = ['-pub_date']
     template_name = 'insta/index.html'
 
-class PostDetailView(DetailView):
+class PostCreateView(CreateView):
     model = Post
+    fields = [ 'title', 'content', 'image']
     
-    
-    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
