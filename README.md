@@ -10,11 +10,14 @@ by uploading images
 
 
 ## Technologies Used
--python django 
--html css
--bootstrap
 
-[![codebeat badge](https://codebeat.co/badges/da92086a-f1d7-4541-a643-ef6a838a845c)](https://codebeat.co/projects/github-com-jamesodera-instaapp-master)
+- python django 
+
+- html css
+
+- bootstrap
+
+## [![codebeat badge](https://codebeat.co/badges/da92086a-f1d7-4541-a643-ef6a838a845c)](https://codebeat.co/projects/github-com-jamesodera-instaapp-master)
 
 ## MIT License
 
