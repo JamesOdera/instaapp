@@ -32,6 +32,11 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('index')
 
+    @classmethod
+    def search_by_title(cls,search_term):
+        insta = cls.objects.filter(title__name__icontains=search_term)
+        return insta
+
 class Comment(models.Model):
     post = models.ForeignKey('insta.Post', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=20)
