@@ -80,13 +80,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'instagram.wsgi.application'
 
 cloudinary.config(
-     cloud_name = 'santan',
-     api_key = '711176936419922',
-     api_secret = 'Ehvw4CDtcQlNmPwDpvez1JplZUQ'
-    # cloud_name = os.environ.get('CLOUD_NAME'),
-    # api_key = os.environ.get('API_KEY'),
-    # api_secret = os.environ.get('API_SECRET'),
-    # secure = True
+    #  cloud_name = 'santan',
+    #  api_key = '711176936419922',
+    #  api_secret = 'Ehvw4CDtcQlNmPwDpvez1JplZUQ'
+    cloud_name = os.environ.get('CLOUD_NAME'),
+    api_key = os.environ.get('API_KEY'),
+    api_secret = os.environ.get('API_SECRET'),
+    secure = True
  )
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
