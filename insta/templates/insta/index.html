@@ -11,7 +11,7 @@
 {% block content %}
 {{block.super}}
 
-<h1 class='text-center'> INSTAGRAM CLONE </h1>
+<h1 class='text-center' style="font-family: 'Dancing Script', cursive; font-weight: 900;"> INSTAGRAM CLONE APP</h1>
 <div class="container-fluid display">
     <div class="row">
     {% for image in images %}
@@ -33,7 +33,7 @@
          </div>
          <div class="panel-body">
             {% if post.cover %}
-            <img src="{{ post.cover.url}}" alt="{{ post.title }}" width="200" height="200">
+            <img src="{{ post.cover.url}}" alt="{{ post.title }}" width="400" height="400">
           {% else %}
           <p></p>
            {% endif %} 
