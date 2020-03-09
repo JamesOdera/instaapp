@@ -12,7 +12,7 @@
 {{block.super}}
 <h1 class='text-center'> ABOUT </h1>
 <hr>
-{% for comment in comments %}
+{% for comment in insta.comments.all %}
     <div class="comment">
         <div class="date">{{ comment.pub_date }}</div>
         <strong>{{ comment.author }}</strong>
