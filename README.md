@@ -1,4 +1,4 @@
-# instaapp
+# <a href="https://insta-c-1.herokuapp.com/">instaapp</a>
 this is a clone of famous instagram app that allows users create accounts and post images 
 
 
@@ -7,6 +7,21 @@ this is a clone of famous instagram app that allows users create accounts and po
 ## Decription
 this is an instagram app clone developed so that users can be able to create their accounts to start using
 by uploading images
+
+## Prerequisites
+Things you need to install the software.
+
+- python3.6.7
+
+## Things you can do
+
+- Sign in to the application to start using.
+
+- Upload your pictures to the application.
+
+- See your profile.
+
+- Edit your Profile incase you need to change it
 
 
 ## Technologies Used
@@ -21,10 +36,5 @@ by uploading images
 
 ## MIT License
 
-Copyright (c) James Odera
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Copyright (c) 2020 James Odera.
+# Copyright (c) James Odera
+# Copyright (c) 2020 James Odera.
